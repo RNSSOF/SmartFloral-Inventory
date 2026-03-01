@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     // فحص حالة الخادم عبر قاعدة URL مرنة
-    const base = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const base = process.env.REACT_APP_API_URL || 'https://smartfloral-inventory.onrender.com';
     fetch(`${base}/api/health`)
       .then(res => res.json())
       .then(() => setServerStatus(true))
@@ -74,3 +74,4 @@ function App() {
 }
 
 export default App;
+
